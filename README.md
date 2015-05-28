@@ -47,27 +47,27 @@ public class InputBinderTester : MonoBehaviour
 	
     public void Horizontal(float value)
     {
-        Debug.Log("Horizontal " + value);
+        // Use Horizontal axis value here.
     }
 
     public void Vertical(float value)
     {
-        Debug.Log("Vertical " + value);
+        // Use Vertical axis value here.
     }
 
     public void JumpPressed()
     {
-        Debug.Log("Jump Pressed!!!");
+       	// Respond to Jump input pressed.
     }
 
     public void JumpReleased()
     {
-        Debug.Log("Jump Released!!!");
+        // Respond to Jump input released.
     }
 
     public void JumpHeld()
     {
-        Debug.Log("Jump Held!!!");
+        // Respond to Jump input held.
     }
 }
 ```
