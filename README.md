@@ -3,11 +3,17 @@
 InputBinder makes it easy for components to respond to axis, button, and key input events. InputBinder links the project inputs to script methods via code or the inspector.
 
 ## Methods
-`BindAxis(string name, UnityAction<float> action)`
+```cs 
+BindAxis(string name, UnityAction<float> action)
+```
 
-`BindButton(string name, InputEvent inputEvent, UnityAction action)`
+```cs 
+BindButton(string name, InputEvent inputEvent, UnityAction action)
+```
 
-`BindKey(KeyCode key, InputEvent inputEvent, UnityAction action)`
+```cs 
+BindKey(KeyCode key, InputEvent inputEvent, UnityAction action)
+```
 
 ## Usage
 
