@@ -6,14 +6,17 @@ InputBinder makes it easy for components to respond to axis, button, and key inp
 ```cs 
 BindAxis(string name, UnityAction<float> action)
 ```
+Binds an given axis name to a method that has a single float argument. This method will be called every `Update` with the value of the axis.
 
 ```cs 
 BindButton(string name, InputEvent inputEvent, UnityAction action)
 ```
+Binds an given button name and `InputEvent` type to a method that has no arguments. This method will only be called when the provided input event occurs for the given input name.
 
 ```cs 
 BindKey(KeyCode key, InputEvent inputEvent, UnityAction action)
 ```
+Binds an given `KeyCode` and `InputEvent` type to a method that has no arguments. This method will only be called when the provided input event occurs for the given key.
 
 ## Usage
 
