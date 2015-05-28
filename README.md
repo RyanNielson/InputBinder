@@ -1,6 +1,8 @@
 # InputBinder
 
-InputBinder makes it easy for components to respond to axis, button, and key input events. InputBinder links the project inputs to script methods via code or the inspector.
+InputBinder makes it easy for components to respond to axis, button, and key input events. Bind game inputs to methods via code or using the inspector to add event driven input handling to your project.
+
+This is somewhat based on Unreal Engine 4's [InputComponent](https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Components/UInputComponent/index.html).
 
 ## Methods
 ```cs 
@@ -22,7 +24,7 @@ Binds an given `KeyCode` and `InputEvent` type to a method that has no arguments
 
 To begin using InputBinder you need to add the InputBinder component to a GameObject. Once added, the inspector allows you to bind input via the inspector using UnityEvents, or you can create bindings in code. Both methods will be explained, and assume you're working with a GameObject with an InputBinder component.
 
-#### Via Scripts
+### Via Scripts
 
 ```cs
 using UnityEngine;
@@ -76,15 +78,15 @@ public class InputBinderTester : MonoBehaviour
 }
 ```
 
-#### Via Inspector
+## Via Inspector
 
 Using InputBinder via the inspector makes it quite easy to set up input bindings. All that is required is to add an element to either the Axis Bindings, Button Bindings, or Key Bindings list. Once added, each type of binding has its own options.
 
-##### Axis Bindings
+#### Axis Bindings
 
 Select the axis name that was set up in Unity's input manager, and then use the Bound Event selector to choose objects and methods to bind to the axis. The chosen methods must accept a single float argument.
 
-##### Button Bindings
+#### Button Bindings
 
 Select the button name that was set up in Unity's input manager, input event, and then use the Bound Event selector to choose objects and methods to bind to the button.
 
