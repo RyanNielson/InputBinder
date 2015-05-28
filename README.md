@@ -43,7 +43,11 @@ public class InputBinderTester : MonoBehaviour
         inputBinder.BindButton("Jump", InputEvent.Pressed, JumpPressed);
         inputBinder.BindButton("Jump", InputEvent.Released, JumpReleased);
         inputBinder.BindButton("Jump", InputEvent.Held, JumpHeld);
-	}
+        
+        inputBinder.BindButton(KeyCode.Space, InputEvent.Pressed, JumpPressed);
+        inputBinder.BindButton(KeyCode.Space, InputEvent.Released, JumpReleased);
+        inputBinder.BindButton(KeyCode.Space, InputEvent.Held, JumpHeld);
+    }
 	
     public void Horizontal(float value)
     {
@@ -57,19 +61,33 @@ public class InputBinderTester : MonoBehaviour
 
     public void JumpPressed()
     {
-       	// Respond to Jump input pressed.
+       	// Respond to Jump or space key input pressed.
     }
 
     public void JumpReleased()
     {
-        // Respond to Jump input released.
+        // Respond to Jump or space key input released.
     }
 
     public void JumpHeld()
     {
-        // Respond to Jump input held.
+        // Respond to Jump or space key input held.
     }
 }
 ```
 
 #### Via Inspector
+
+Using InputBinder via the inspector makes it quite easy to set up input bindings. All that is required is to add an element to either the Axis Bindings, Button Bindings, or Key Bindings list. Once added, each type of binding has its own options.
+
+##### Axis Bindings
+
+Select the axis name that was set up in Unity's input manager, and then use the Bound Event selector to choose objects and methods to bind to the axis. The chosen methods must accept a single float argument.
+
+##### Button Bindings
+
+Select the button name that was set up in Unity's input manager, input event, and then use the Bound Event selector to choose objects and methods to bind to the button.
+
+##### Key Bindings
+
+Select the key, input event, and then use the Bound Event selector to choose objects and methods to bind to the button.
